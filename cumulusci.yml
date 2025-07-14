@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '4.4.0'
+project:
+    name: MWD2025-Demo
+    package:
+        name: MWD2025-Demo
+        api_version: '63.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/MWD2025-Demo/tests
+            options:
+                outputdir: robot/MWD2025-Demo/results
+
+    robot_testdoc:
+        options:
+            path: robot/MWD2025-Demo/tests
+            output: robot/MWD2025-Demo/doc/MWD2025-Demo_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
